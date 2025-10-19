@@ -1,0 +1,120 @@
+/* ================================
+   💫 HIỆU ỨNG NỔI TINH TẾ BLACKTEA POS
+   ================================ */
+
+/* 💙 Nút màu chính */
+button.hieuung-noi,
+.btn.hieuung-noi {
+  background: linear-gradient(145deg, #5479c1, #3e5e9c) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  transition: all 0.25s ease !important;
+
+  /* Hiệu ứng nổi nhẹ */
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.25),
+    2px 2px 5px rgba(0,0,0,0.18) !important;
+}
+
+/* Hover: nổi rõ hơn một chút */
+button.hieuung-noi:hover,
+.btn.hieuung-noi:hover {
+  background: linear-gradient(145deg, #5d81c8, #3a5895) !important;
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.3),
+    3px 3px 6px rgba(0,0,0,0.22) !important;
+}
+
+/* Khi bấm: chìm nhẹ, không nháy */
+button.hieuung-noi:active,
+.btn.hieuung-noi:active {
+  background: linear-gradient(145deg, #4d6fb4, #3a5692) !important;
+  box-shadow:
+    inset 2px 2px 3px rgba(0,0,0,0.3),
+    inset -1px -1px 2px rgba(255,255,255,0.2) !important;
+  transform: none !important;
+}
+
+/* 🌤 Nút nền nhạt */
+button.hieuung-nhat,
+.btn.hieuung-nhat {
+  background: linear-gradient(145deg, #f1f5ff, #d9e4fa) !important;
+  color: #4A69AD !important;
+  border-radius: 12px !important;
+  transition: all 0.25s ease !important;
+
+  /* Hiệu ứng nổi nhẹ + bóng tinh tế */
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.7),
+    2px 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+/* Hover: nổi rõ hơn */
+button.hieuung-nhat:hover,
+.btn.hieuung-nhat:hover {
+  background: linear-gradient(145deg, #e8efff, #cfdcf6) !important;
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.8),
+    3px 3px 6px rgba(0,0,0,0.12) !important;
+}
+
+/* Khi bấm: chìm nhẹ */
+button.hieuung-nhat:active,
+.btn.hieuung-nhat:active {
+  background: linear-gradient(145deg, #dbe6fb, #bfcdef) !important;
+  box-shadow:
+    inset 2px 2px 3px rgba(0,0,0,0.15),
+    inset -1px -1px 2px rgba(255,255,255,0.6) !important;
+  transform: none !important;
+}
+
+/* 🚫 Tắt toàn bộ hiệu ứng nháy focus trên mọi trình duyệt */
+button:focus,
+button:focus-visible,
+.btn:focus,
+.btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important; /* 🔥 đặc biệt quan trọng trên Android */
+}
+
+
+/* ================================
+   🌟 ẨN TOÀN BỘ THANH CUỘN (vẫn cuộn được)
+   ================================ */
+
+/* Ẩn trên toàn trang */
+html, body, * {
+  scrollbar-width: none !important;      /* Firefox */
+  -ms-overflow-style: none !important;   /* IE, Edge cũ */
+}
+
+/* Ẩn cho WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+
+
+/* container icon (kích thước, color) */
+.icon-app {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;   /* chỉnh theo cần */
+  height:20px;
+  color: var(--mauchinh);   /* icon SVG sẽ lấy color từ đây */
+  line-height:0;
+}
+
+/* nếu muốn icon to/nhỏ theo data-size attribute */
+button[data-icon][data-size="sm"] .icon-app { width:16px; height:16px; }
+button[data-icon][data-size="md"] .icon-app { width:20px; height:20px; }
+button[data-icon][data-size="lg"] .icon-app { width:28px; height:28px; }
+
+/* trạng thái ví dụ */
+.status-box.serving .icon-app { color: var(--mauphucvu); transform: scale(1.06); }
+.note-btn.disabled .icon-app { opacity: 0.4; }
+
+

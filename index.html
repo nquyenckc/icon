@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlackTea POS v2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hieuung.css"/>
+</head>
+<body>
+<header>
+  <h1>BlackTea</h1>
+  <div class="header-icons">
+    <span class="icon-btn"><i class="fas fa-clock-rotate-left" style="color:white;"></i></span>
+    <span class="icon-btn"><i class="fas fa-gear" style="color:white;"></i></span>
+  </div>
+</header>
+
+  <main class="main-container">
+  <div class="btn-group">
+    <button class="btn hieuung-noi" id="btn-takeaway">Khách mang đi</button>
+    <button class="btn hieuung-noi" id="btn-dinein">Khách ghé quán</button>
+  </div>
+
+  <div class="table-list">
+    <p class="empty-state">Chưa có đơn hàng nào</p>
+  </div>
+
+  <!-- ✅ Thêm vùng gọi món (ẩn trước) -->
+  <div id="order-container" style="display:none;"></div>
+</main>
+<!-- ✅ Nạp Firebase trước -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // 🔧 Cấu hình Firebase của bạn
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="menu.js"></script>
+<script src="tables.js"></script>
+<script src="notes.js"></script>
+<script src="order.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
